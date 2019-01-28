@@ -30,9 +30,9 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-// Set MongoDB name to Heroku mLab URI (deployed) or mongoHeadlines (localhost)
+// Set MongoDB name to Heroku mLab URI (deployed) or googlebooks (localhost)
 const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/nytgbooks";
+  process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
 
 // Set up mongoose to use built in ES6 promises and connect to MongoDB
 mongoose.Promise = Promise;
