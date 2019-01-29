@@ -1,21 +1,17 @@
 // *** Include Modules: npm (react, react-router-dom), /components, /utils
 import React, { Component } from "react";
-import View from "../components/Button";
+// import DeleteBtn from "../components/Button";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
+import { List, ListSearch } from "../components/List";
 import { Card } from "../components/Card";
 import { SearchForm } from "../components/Form";
 
 class SearchBooks extends Component {
-  // Structure state object
+  // Setting our component's initial state
   state = {
-    // books: [],
-    // title: "",
-    // author: "",
-    // synopsis: "",
     title: "",
     authors: "",
     description: "",
@@ -42,20 +38,7 @@ class SearchBooks extends Component {
       .catch(err => console.log(err));
   };
 
-  loadBooks = () => {
-    API.getBooks()
-      .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
-      )
-      .catch(err => console.log(err));
-  };
-
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
-      .catch(err => console.log(err));
-  };
-
+  // Handles updating component state when the user types into the input field
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -73,12 +56,6 @@ class SearchBooks extends Component {
   handleSaveSubmit = (id, title, authors, description, imageLinks, infoLink, event) => {
     event.preventDefault();
     if (title && authors) {
-    console.log(id);
-    console.log(title);
-    console.log(authors);
-    console.log(description);
-    console.log(imageLinks);
-    console.log(infoLink);
       API.saveBook({
         title: title,
         authors: authors,
@@ -110,7 +87,7 @@ class SearchBooks extends Component {
               {this.state.result.length ? (
                 <List>
                   {this.state.result.map(volume => (
-                    <ListItem
+                    <ListSearch
                       handleSaveSubmit={this.handleSaveSubmit}
                       id={volume.id}
                       title={volume.volumeInfo.title}
