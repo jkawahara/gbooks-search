@@ -31,3 +31,7 @@
 .list-overflow-container li:last-child {
   border-bottom: none;
 }
+
+li a {
+  font-size: 20pt;
+}

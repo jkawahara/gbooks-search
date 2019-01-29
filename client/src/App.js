@@ -1,8 +1,8 @@
 // *** Include Modules: npm (react, react-router-dom), /pages, /components, /App.css
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
+import SearchBooks from "./pages/SearchBooks";
+import SavedBooks from "./pages/SavedBooks";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import "./App.css";
@@ -13,9 +13,8 @@ function App() {
      <div>
         <Nav />
         <Switch>
-          <Route exact path="/" component={Books} />
-          <Route exact path="/books" component={Books} />
-          <Route exact path="/books/:id" component={Detail} />
+          <Route exact path="/" component={SearchBooks} />
+          <Route exact path="/savedBooks" component={SavedBooks} />
           <Route component={NoMatch} />
         </Switch>
       </div>

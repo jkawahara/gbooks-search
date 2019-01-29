@@ -1,6 +1,11 @@
 // *** Include Modules: npm (axios)
 import axios from "axios";
 
+// Google Books API GET volumnes Request structure: BASEURL + query + APIKEY
+const BASEURL = "https://www.googleapis.com/books/v1/volumes?q=";
+const APIKEY = "&key=" + process.env.REACT_APP_GBOOKS_API
+
+// Export axios GET, POST, DELETE
 export default {
   // Gets all books
   getBooks: function() {
@@ -17,5 +22,8 @@ export default {
   // Saves a book to the database
   saveBook: function(bookData) {
     return axios.post("/api/books", bookData);
+  },
+  search: function(query) {
+    return axios.get(BASEURL + query + APIKEY);
   }
 };
