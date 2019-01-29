@@ -1,9 +1,9 @@
 // *** Include Modules: npm (react, react-router-dom), /components, /utils
 import React, { Component } from "react";
-import DeleteBtn from "../components/Button";
+// import DeleteBtn from "../components/Button";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListSaved } from "../components/List";
 import { Card } from "../components/Card";
