@@ -34,7 +34,7 @@ class SavedBooks extends Component {
   };
 
   // Deletes a book from the database with a given id, then reloads books from the db
-  handelDeleteSubmit = id => {
+  handleDeleteSubmit = (id, event) => {
     API.deleteBook(id)
       .then(res => this.loadBooks())
       .catch(err => console.log(err));

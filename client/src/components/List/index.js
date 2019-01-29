@@ -37,7 +37,7 @@ export function ListSearch(props) {
 export function ListSaved(props) {
   return (
     <li className="list-group-item">
-      <button onClick={props.handleDeleteSubmit} data-id={props._id} className="btn btn-primary text-white float-right m-1">
+      <button onClick={props.handleDeleteSubmit.bind(this, props.id)} data-id={props.id} className="btn btn-primary text-white float-right m-1">
         Delete
       </button>
       <a className="btn btn-primary text-white float-right m-1" href={props.infoLink} role="button" alt={props.infoLink}>View</a>
