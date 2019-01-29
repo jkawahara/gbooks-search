@@ -31,9 +31,10 @@ class SearchBooks extends Component {
   searchBooks = query => {
     API.search(query)
       .then(res => {
-        console.log(res.data.items);
-        this.state.search = "";
-        return this.setState({ result: res.data.items })
+        this.setState({
+          search: ""
+        });
+        return this.setState({ result: res.data.items });
       })
       .catch(err => console.log(err));
   };
@@ -76,7 +77,7 @@ class SearchBooks extends Component {
             <Jumbotron>
               <h1>Google Books Search</h1>
             </Jumbotron>
-            <Card heading="Book">
+            <Card heading="Book Search">
               <SearchForm
                 value={this.state.search}
                 handleInputChange={this.handleInputChange}
