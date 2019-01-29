@@ -1,8 +1,8 @@
+// *** Include Modules: npm (react, react-dom), ./App, /index.css
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
-import registerServiceWorker from "./registerServiceWorker";
+import "./index.css";
 
+// Render components in #root element of index.html 
 ReactDOM.render(<App />, document.getElementById("root"));
-registerServiceWorker();
