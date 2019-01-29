@@ -10,20 +10,22 @@ import { Card } from "../components/Card";
 import { SearchForm } from "../components/Form";
 
 class SearchBooks extends Component {
+  // Structure state object
   state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: "",
+    // books: [],
     // title: "",
-    // authors: "",
-    // description: "",
-    // image: "",
-    // link: "",
+    // author: "",
+    // synopsis: "",
+    title: "",
+    authors: "",
+    description: "",
+    image: "",
+    link: "",
     result: [],
     search: ""
   };
 
+  // When component mounts, run default search on Candide
   componentDidMount() {
     // this.loadBooks();
     this.searchBooks("Candide");
@@ -62,23 +64,32 @@ class SearchBooks extends Component {
   };
 
   // When search form is submitted, call searchBooks() for the value of `this.state.search`
-  handleFormSubmit = event => {
+  handleSearchSubmit = event => {
     event.preventDefault();
     this.searchBooks(this.state.search);
   };
 
-  // handleFormSubmit = event => {
-  //   event.preventDefault();
-  //   if (this.state.title && this.state.author) {
-  //     API.saveBook({
-  //       title: this.state.title,
-  //       author: this.state.author,
-  //       synopsis: this.state.synopsis
-  //     })
-  //       .then(res => this.loadBooks())
-  //       .catch(err => console.log(err));
-  //   }
-  // };
+  // Save book
+  handleSaveSubmit = (id, title, authors, description, imageLinks, infoLink, event) => {
+    event.preventDefault();
+    if (title && authors) {
+    console.log(id);
+    console.log(title);
+    console.log(authors);
+    console.log(description);
+    console.log(imageLinks);
+    console.log(infoLink);
+      API.saveBook({
+        title: title,
+        authors: authors,
+        description: description,
+        image: imageLinks,
+        link: infoLink
+      })
+        .then(res => this.loadBooks())
+        .catch(err => console.log(err));
+    }
+  };
 
   render() {
     return (
@@ -92,7 +103,7 @@ class SearchBooks extends Component {
               <SearchForm
                 value={this.state.search}
                 handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit}
+                handleSearchSubmit={this.handleSearchSubmit}
               />
             </Card>
             <Card heading="Results">
@@ -100,6 +111,8 @@ class SearchBooks extends Component {
                 <List>
                   {this.state.result.map(volume => (
                     <ListItem
+                      handleSaveSubmit={this.handleSaveSubmit}
+                      id={volume.id}
                       title={volume.volumeInfo.title}
                       authors={volume.volumeInfo.authors}
                       description={volume.volumeInfo.description}

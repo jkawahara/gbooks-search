@@ -33,7 +33,7 @@ export function SearchForm(props) {
           id="search"
         />
         <br />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary">
+        <button onClick={props.handleSearchSubmit} className="btn btn-primary">
           Search
         </button>
       </div>
