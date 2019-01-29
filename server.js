@@ -25,11 +25,6 @@ if (process.env.NODE_ENV === "production") {
 // *** Routes
 app.use(routes);
 
-// Send all other requests to React
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
-
 // Set MongoDB name to Heroku mLab URI (deployed) or googlebooks (localhost)
 const MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
