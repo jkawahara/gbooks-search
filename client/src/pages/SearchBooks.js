@@ -13,7 +13,7 @@ class SearchBooks extends Component {
   // Setting our component's initial state
   state = {
     title: "",
-    authors: "",
+    authors: [],
     description: "",
     image: "",
     link: "",
@@ -26,6 +26,15 @@ class SearchBooks extends Component {
     // this.loadBooks();
     this.searchBooks("Candide");
   }
+
+  // Loads all books  and sets them to this.state.books
+  loadBooks = () => {
+    API.getBooks()
+      .then(res => {
+        this.setState({ books: res.data, title: "", authors: [], description: "", image: "", link: "" })
+      })
+      .catch(err => console.log(err));
+  };
 
   // Google Books search
   searchBooks = query => {

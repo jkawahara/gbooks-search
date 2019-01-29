@@ -13,7 +13,7 @@ class SavedBooks extends Component {
   state = {
     books: [],
     title: "",
-    authors: "",
+    authors: [],
     description: "",
     image: "",
     link: "",
@@ -28,7 +28,7 @@ class SavedBooks extends Component {
   loadBooks = () => {
     API.getBooks()
       .then(res => {
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ books: res.data, title: "", authors: [], description: "", image: "", link: "" })
       })
       .catch(err => console.log(err));
   };
