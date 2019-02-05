@@ -19,7 +19,7 @@
       * Search Books ![searchbooks.png](client/public/readmelinks/searchbooks.png "searchbooks")
       * Saved Books ![savedbooks.png](client/public/readmelinks/savedbooks.png "savedbooks")
       * JSON Resources
-        * Articles ![jsonbooks.png](client/public/readmelinks/jsonbooks.png "jsonbooks")
+        * Books ![jsonbooks.png](client/public/readmelinks/jsonbooks.png "jsonbooks")
   * Design Description
     * Application Setup (server.js)
       * Configure Express web app framework listening on process.env.PORT for Heroku deployment or default to 3001 for localhost. Serve up static assets. Configure middleware including Morgan Logger and parse URL encoded (any type including nested objects, JSON). Setup routes. Connect Mongoose models.
