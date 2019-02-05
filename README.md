@@ -18,9 +18,8 @@
     * Wireframe
       * Search Books ![searchbooks.png](client/public/readmelinks/searchbooks.png "searchbooks")
       * Saved Books ![savedbooks.png](client/public/readmelinks/savedbooks.png "savedbooks")
-      * Sign up as a new user ![signup.png](client/public/readmelinks/signup.png "signup")
       * JSON Resources
-        * Articles ![jsonarticles.png](client/public/readmelinks/jsonarticles.png "jsonarticles")
+        * Articles ![jsonbooks.png](client/public/readmelinks/jsonbooks.png "jsonbooks")
   * Design Description
     * Application Setup (server.js)
       * Configure Express web app framework listening on process.env.PORT for Heroku deployment or default to 3001 for localhost. Serve up static assets. Configure middleware including Morgan Logger and parse URL encoded (any type including nested objects, JSON). Setup routes. Connect Mongoose models.
@@ -63,7 +62,7 @@
     * 64 bit operating system 
     * git version 2.18.0
     * Visual Studio Code Version 1.29.1
-    * [GitHub Project-3](https://github.com/OrionAbrams/Project-3)
+    * [GitHub Repo](https://github.com/jkawahara/nyt-gbooks-search)
     * Chrome Version 70.0.3538.110 (Official Build) (64-bit)
   * Built With:
     * This app was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
