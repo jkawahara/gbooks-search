@@ -1,4 +1,4 @@
-# Live Link to [Google Books Search](https://bcbc-nyt-gbooks-search.herokuapp.com/)
+# Live Link to [Google Books Search](https://bcbc-gbooks-search.herokuapp.com/)
 ### 1. Why / Background
   * Google Books Search is a web based application enabling users to search Google Books, view and save for later viewing.
  ### 2. What / Objectives / User Stories
@@ -62,7 +62,7 @@
     * 64 bit operating system 
     * git version 2.18.0
     * Visual Studio Code Version 1.29.1
-    * [GitHub Repo](https://github.com/jkawahara/nyt-gbooks-search)
+    * [GitHub Repo](https://github.com/jkawahara/gbooks-search)
     * Chrome Version 70.0.3538.110 (Official Build) (64-bit)
   * Built With:
     * This app was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -89,7 +89,7 @@
       * [Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) with [mLab MongoDB plugin](https://devcenter.heroku.com/articles/mongolab)
   * Installing:
     * For further development or use of this application, clone or download application files from GitHub, which is organized into the following directory structure:
-      * /nyt-gbooks-search (application root directory level for Node/Express server)
+      * /gbooks-search (application root directory level for Node/Express server)
         * /client (React app specific directories)
           * /node_modules (ignored by git) - generated first time npm install executes
           * /public
@@ -131,7 +131,7 @@
   * Running the tests:
     * Unit testing was informally executed
   * Deployment:
-    * App deployed on [Heroku](https://bcbc-nyt-gbooks-search.herokuapp.com/)
+    * App deployed on [Heroku](https://bcbc-gbooks-search.herokuapp.com/)
  ## Versioning
   * For the versions available, see the tags on this repository.
  ## Authors
