@@ -3,11 +3,11 @@
   * Google Books Search is a web based application enabling users to search Google Books, view and save for later viewing.
  ### 2. What / Objectives / User Stories
   * From design through deployment of the application, this project used the following web development technologies:
-    * Server-side: Node.js w/ Express web app framework; MongoDB for data persistence w/ Mongoose ORM 
+    * Server-side: Node.js w/ Express web app framework; MongoDB for data persistence w/ Mongoose ODM 
     * Client-side: React.js library for component based user interface; Bootstrap framework for HTML/CSS
   * User Stories, by categorization:
     * Design and develop Wireframe mockup including conceptual single page application with component based views: search books, saved books
-    * Design and develop Model schema including ORM (Mongoose) and DB (MongoDB) configuration
+    * Design and develop Model schema including ODM (Mongoose) and DB (MongoDB) configuration
     * Design and develop View on UI including components (React)
     * Design and develop Controller functions including routing and required CRUD operations
  ### 3. How / Design Description
