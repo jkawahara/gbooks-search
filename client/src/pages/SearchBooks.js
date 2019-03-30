@@ -43,7 +43,6 @@ class SearchBooks extends Component {
         this.setState({
           search: ""
         });
-        console.log(res.data.items);
         return this.setState({ result: res.data.items });
       })
       .catch(err => console.log(err));
@@ -104,7 +103,7 @@ class SearchBooks extends Component {
                       title={volume.volumeInfo.title}
                       authors={volume.volumeInfo.authors}
                       description={volume.volumeInfo.description}
-                      imageLinks={volume.volumeInfo.imageLinks.thumbnail}
+                      imageLinks={volume.volumeInfo.imageLinks ? (volume.volumeInfo.imageLinks.thumbnail) : ("https://books.google.com/googlebooks/images/no_cover_thumb.gif")}
                       infoLink={volume.volumeInfo.infoLink}
                     />
                   ))}
