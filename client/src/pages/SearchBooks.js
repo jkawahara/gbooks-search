@@ -43,6 +43,7 @@ class SearchBooks extends Component {
         this.setState({
           search: ""
         });
+        console.log(res.data.items);
         return this.setState({ result: res.data.items });
       })
       .catch(err => console.log(err));
@@ -97,7 +98,7 @@ class SearchBooks extends Component {
               {this.state.result.length ? (
                 <List>
                   {this.state.result.map(volume => (
-                    <ListSearch
+                    <ListSearch key={volume.id}
                       handleSaveSubmit={this.handleSaveSubmit}
                       id={volume.id}
                       title={volume.volumeInfo.title}
